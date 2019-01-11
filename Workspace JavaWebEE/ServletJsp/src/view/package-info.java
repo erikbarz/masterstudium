@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author erikb
- *
- */
-package view;
