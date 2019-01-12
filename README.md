@@ -1,7 +1,7 @@
-# Repository Ãœbersicht
+# Repository Übersicht
 
 #### Java EE und Web-Programmierung
         Technologien: Java, Servlet, JSP, JSF, EJB
 
-### Ãœbersicht E-Business Management
+#### Übersicht E-Business Management
         Technologien: Java, Sockets, RMI, Jade Multi-Agenten-System
