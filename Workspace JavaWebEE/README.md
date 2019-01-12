@@ -1,4 +1,4 @@
-# Ãœbersicht Java EE und Web-Programmierung
+# Übersicht Java EE und Web-Programmierung
 
 #### Technologien:
-        Java, Servlet, JSP, JSF, EJB
+        Wildfly AS, Java, Servlet, JSP, JSF, EJB
