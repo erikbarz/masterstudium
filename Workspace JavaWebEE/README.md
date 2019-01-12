@@ -1,5 +1,4 @@
-Projekt-Beschreibung:
-Einsendeaufgaben aus dem Kurs 01796 Java Webprogrammierung
+# Übersicht Java EE und Web-Programmierung
 
-Technologien:
-Java, Servlet, JSP, JSF
+#### Technologien:
+        Java, Servlet, JSP, JSF, EJB
