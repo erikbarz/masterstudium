@@ -18,7 +18,7 @@ public class ManagedBean {
     private String strasse;
     private String mail;
     private String gewicht;
-    private String ort;
+    private String ort; 
     
     private String name;
 
