@@ -3,10 +3,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Komponenten</title>
+        <title>JSF-App Basics: Result</title>
     </h:head>
     <h:body>
+        Folgende Informationen wurden in der Managed Bean im Request Scope festgehlaten:<br></br>
         Ihr vollständiger Name: <h:outputLabel id="name" value="#{managedBean.name}" />
+        <h:form>
+            <table>
+                <tr>
+                    <td><h:outputLabel value="#{managedBean.strasse}" /></td>
+                </tr>     
+                <tr>
+                    <td><h:outputLabel value="#{managedBean.plz}" /></td>
+                </tr>  
+                <tr>
+                    <td><h:outputLabel value="#{managedBean.ort}" /></td>
+                </tr>  
+                <tr>
+                    <td><h:outputLabel value="#{managedBean.mail}" /></td>
+                </tr>       
+                <tr>
+                    <td><h:outputLabel value="#{managedBean.gewicht}" /></td>
+                </tr>   
+                 <tr>
+                    <td><h:outputLabel value="#{managedBean.alter}" /></td>
+                </tr>     
+            </table>
+        </h:form>
     </h:body>
 </html>
 
