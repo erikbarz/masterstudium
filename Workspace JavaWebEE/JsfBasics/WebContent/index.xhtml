@@ -1,52 +1,85 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>JSF-App Basics: Formular</title> 
-    </h:head>
-    
-    <h:body>
-        <h:form>
-            <table>
-                <tr>
-                    <td><h:outputLabel value="Vorname" /></td>
-                    <td><h:inputText id="vorname" value="#{managedBean.vorname}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="Nachname" /></td>
-                    <td><h:inputText id="nachname" value="#{managedBean.nachname}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="strasse" /></td>
-                    <td><h:inputText id="strasse" value="#{managedBean.strasse}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="PLZ" /></td>
-                    <td><h:inputText id="plz" value="#{managedBean.plz}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="Ort" /></td>
-                    <td><h:inputText id="ort" value="#{managedBean.ort}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="Alter" /></td>
-                    <td><h:inputText id="alter" value="#{managedBean.alter}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="Mail" /></td>
-                    <td><h:inputText id="mail" value="#{managedBean.mail}" /></td>
-                </tr>
-                <tr>
-                    <td><h:outputLabel value="Gewicht" /></td>
-                    <td><h:inputText id="gewicht" value="#{managedBean.gewicht}" /></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><h:commandButton id="absenden" value="Absenden" action="#{managedBean.onButtonClicked}" /></td>
-                </tr>
-            </table>
-        </h:form>
-    </h:body>
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>JSF-App Basics: Formular</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<table>
+			<tr>
+				<td><h:outputLabel value="Vorname">
+					</h:outputLabel></td>
+				<td><h:inputText id="vorname" value="#{managedBean.vorname}"
+						validatorMessage="Vorname: Falsche Eingabe. Bitte einen Wert eingeben!">
+						<f:validateRequired />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Nachname">
+					</h:outputLabel></td>
+				<td><h:inputText id="nachname" value="#{managedBean.nachname}"
+						validatorMessage="Nachname: Falsche Eingabe. Bitte einen Wert eingeben!">
+						<f:validateRequired />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="strasse">
+					</h:outputLabel></td>
+				<td><h:inputText id="strasse" value="#{managedBean.strasse}"
+						validatorMessage="Strasse: Falsche Eingabe. Bitte einen Wert eingeben!">
+						<f:validateRequired />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="PLZ">
+					</h:outputLabel></td>
+				<td><h:inputText id="plz" value="#{managedBean.plz}"
+						validatorMessage="PLZ: Falsche Eingabe. Muss 5-stellig sein!">
+						<f:validateLongRange minimum="10000" maximum="99999" />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Ort">
+					</h:outputLabel></td>
+				<td><h:inputText id="ort" value="#{managedBean.ort}"
+						validatorMessage="Ort: Falsche Eingabe. Bitte einen Wert eingeben!">
+						<f:validateRequired />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Alter">
+					</h:outputLabel></td>
+				<td><h:inputText id="alter" value="#{managedBean.alter}"
+						validatorMessage="Alter: Falsche Eingabe. Bitte einen gültigen Wert eingeben!">
+						<f:validateLongRange minimum="10" maximum="120" />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Mail">
+					</h:outputLabel></td>
+				<td><h:inputText id="mail" value="#{managedBean.mail}"
+						validatorMessage="Mail: Falsche Eingabe. Bitte einen Wert eingeben!">
+						<f:validateRequired />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Gewicht"></h:outputLabel></td>
+				<td><h:inputText id="gewicht" value="#{managedBean.gewicht}"
+						validatorMessage="Gewicht: Falsche Eingabe. Bitte einen gültigen Wert eingeben!">
+						<f:validateLongRange minimum="40" maximum="1000" />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><h:commandButton id="absenden" value="Absenden"
+						action="#{managedBean.onButtonClicked}" /></td>
+			</tr>
+		</table>
+	</h:form>
+</h:body>
 </html>
 
